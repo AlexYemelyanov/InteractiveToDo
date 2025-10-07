@@ -5,13 +5,15 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.sass">
+  <script src="https://kit.fontawesome.com/6e96f7e789.js" crossorigin="anonymous"></script>
   <title>Zonify</title>
 </head>
 
 <body>
   <header>
     <div class="wrapper">
-      <div class="container">
+      <div class="container container__header">
         <div class="header">
           <div class="header__logo">
             <svg width="100" height="100" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
@@ -70,14 +72,18 @@
               <text class="text" x="145" y="160">nify</text>
             </svg>
           </div>
-          <div class="header__time"></div>
+          <div class="header__time">17:44</div>
           <div class="header__auth">
             <button class="btn btn__logIn">Log in</button>
             <button class="btn btn__signIn">Sign in</button>
           </div>
           <div class="header__dark-lite">
             <input type="checkbox" class="switchMode" name="switchMode" id="toggleDarkMode">
-            <label for="toggleDarkMode" class="switchMode__lable"></label>
+            <label for="toggleDarkMode" class="switchMode__label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="ball"></span>
+            </label>
           </div>
         </div>
       </div>
@@ -86,23 +92,25 @@
   <main>
     <div class="wrapper">
       <div class="container">
-        <div class="slidly-zone-menu">
-          <h3>Zone your tasks</h3>
-          <div class="slidly-zone-menu__toggler"></div>
-          <button class="btn slidly-zone-menu__btn">Add zone</button>
+        <div class="main">
+          <div class="slidly-zone-menu">
+            <h3>Zone your tasks</h3>
+            <div class="slidly-zone-menu__toggler"></div>
+            <button class="btn slidly-zone-menu__btn">Add zone</button>
+          </div>
+          <section class="todo__colums">
+            <div class="todo__colum">
+              <h4>ToDo</h4>
+              <button class="btn addTask__btn">Add task</button>
+            </div>
+            <div class="todo__colum">
+              <h4>In progress</h4>
+            </div>
+            <div class="todo__colum">
+              <h4>Done</h4>
+            </div>
+          </section>
         </div>
-        <section class="todo__colums">
-          <div class="todo__colum">
-            <h4>ToDo</h4>
-            <button>Add task</button>
-          </div>
-          <div class="todo__colum">
-            <h4>In progress</h4>
-          </div>
-          <div class="todo__colum">
-            <h4>Done</h4>
-          </div>
-        </section>
       </div>
     </div>
   </main>
